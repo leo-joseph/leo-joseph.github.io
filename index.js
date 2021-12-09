@@ -64,7 +64,7 @@ async function fetchCharacter() {
     // the endpoint is an array with one result, so we need to access the first item in the array
     const details = result[0];
     const detail = document.querySelector('.details');
-    detail.innerHTML = `<p>${details[0]}</p>`;
+    detail.innerHTML = `<p>${details}</p>`;
 
     // pass the details to the function that will create the HTML
     //createHtml(details);
