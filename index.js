@@ -59,24 +59,26 @@ async function fetchCharacter() {
     const response = await fetch(url);
     const result = await response.json();
 
-    console.log(result);
+   // console.log(result);
 
     // the endpoint is an array with one result, so we need to access the first item in the array
     const details = result[0];
+    const detail = document.querySelector('.details');
+    detail.innerHTML = `<p>${details[0]}</p>`;
 
     // pass the details to the function that will create the HTML
-    createHtml(details);
+    //createHtml(details);
   } catch (error) {
-    console.log(error);
-    detailContainer.innerHTML = error;
+    //console.log(error);
+    //detailContainer.innerHTML = error;
   }
 }
 
 // call the function
 fetchCharacter();
 
-function createHtml(details) {
-  detailContainer.innerHTML += `<h1 class="name">${details.name}</h1>
-                                <div class="image" style="background-image: url=('${details.img}')"></div>
-                                <div class="status">Status: <b>${details.status}</b></div>`;
-}
+// function createHtml(details) {
+ // detailContainer.innerHTML += `<h1 class="name">${details.name}</h1>
+                               // <div class="image" style="background-image: url=('${details.img}')"></div>
+                              //  <div class="status">Status: <b>${details.status}</b></div>`;
+// }
