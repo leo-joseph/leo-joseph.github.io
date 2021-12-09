@@ -71,7 +71,9 @@ dc.appendChild(para);
     // pass the details to the function that will create the HTML
     //createHtml(details);
   } catch (error) {
-    //console.log(error);
+   const er = document.createElement('p');
+er.innerText = error;
+document.body.appendChild(er);
     //detailContainer.innerHTML = error;
   }
 }
