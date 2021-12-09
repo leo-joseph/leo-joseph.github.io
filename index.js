@@ -57,13 +57,16 @@ const url = "https://breakingbadapi.com/api/characters/6";
 async function fetchCharacter() {
   try {
     const response = await fetch(url);
-    const result = await response.json();
+    // const result = await response.json();
 
    // console.log(result);
 
     // the endpoint is an array with one result, so we need to access the first item in the array
-    const details = result[0];
-    dc.innerHTML = `<p>${details}</p>`;
+  //  const details = result[0];
+    // dc.innerHTML = `<p>${details}</p>`;
+const para = document.createElement('p');
+para.innerText = response;
+dc.appendChild(para);
 
     // pass the details to the function that will create the HTML
     //createHtml(details);
