@@ -50,7 +50,7 @@ fetchTeams();*/
 // https://breakingbadapi.com/api/characters/6
 // Display the name, image and status of the character returned.
 
-const detailContainer = document.querySelector(".details");
+const dc = document.querySelector(".details");
 const url = "https://breakingbadapi.com/api/characters/6";
 
 // we need an async function as we are using await// we need an async function as we are using await
@@ -63,8 +63,7 @@ async function fetchCharacter() {
 
     // the endpoint is an array with one result, so we need to access the first item in the array
     const details = result[0];
-    const detail = document.querySelector('.details');
-    detail.innerHTML = `<p>${details}</p>`;
+    dc.innerHTML = `<p>${details}</p>`;
 
     // pass the details to the function that will create the HTML
     //createHtml(details);
