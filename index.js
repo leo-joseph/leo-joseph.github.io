@@ -77,6 +77,6 @@ fetchCharacter();
 
 function createHtml(details) {
   detailContainer.innerHTML += `<h1 class="name">${details.name}</h1>
-                                <div class="image" style="background-image: ulr=('${details.img}')"></div>
+                                <div class="image" style="background-image: url=('${details.img}')"></div>
                                 <div class="status">Status: <b>${details.status}</b></div>`;
 }
