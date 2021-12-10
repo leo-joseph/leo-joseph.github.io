@@ -17,7 +17,7 @@ async function fetchCharacter() {
     const result = await response.json();
 
 const para = document.createElement('p');
-para.innerText = result;
+para.innerText = result[0];
 dc.appendChild(para);
 
   } catch (error) {
