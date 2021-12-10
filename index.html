@@ -14,10 +14,10 @@ const url = "https://breakingbadapi.com/api/characters/";
 async function fetchCharacter() {
   try {
     const response = await fetch(url);
-    // const result = await response.json();
+    const result = await response.json();
 
 const para = document.createElement('p');
-para.innerText = response[0];
+para.innerText = result;
 dc.appendChild(para);
 
   } catch (error) {
