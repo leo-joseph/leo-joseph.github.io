@@ -1,32 +1,41 @@
+
 <!DOCTYPE html>
-<html lang="en-US">
-<head>
-<meta charset="utf-8">
-<title>js</title>
-</head>
-<body>
-<p>hello world</p>
-<div class="details"></div>
-<script>
-const dc = document.querySelector(".details");
-const url = "https://breakingbadapi.com/api/characters/6";
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS1 Module 4 Lesson Task 4</title>
+    <link rel="stylesheet" href="css/lesson4.4.css" />
+    <link rel="icon" href="data:;base64,=" />
+  </head>
+  <body>
+    <main class="container">
+      <div id="message"></div>
+      <form>
+        <div>
+          <label>
+            First name (required)
+            <input name="firstName" id="firstName" />
+          </label>
+        </div>
 
-async function fetchCharacter() {
-  try {
-    const response = await fetch(url);
-    const result = await response.json();
+        <div>
+          <label>
+            Last name (minimum 4 characters)
+            <input name="lastName" id="lastName" />
+          </label>
+        </div>
 
-const para = document.createElement('p');
-para.innerText = result;
-dc.appendChild(para);
+        <div>
+          <label>
+            Email (required)
+            <input name="email" id="email" />
+          </label>
+        </div>
 
-  } catch (error) {
-      const er = document.createElement('p');
-      er.innerText = error;
-     document.body.appendChild(er);
-  }
-}
-fetchCharacter();
-</script>
-</body>
+        <button disabled>Send</button>
+      </form>
+    </main>
+    <script src="js/lesson4.4.js"></script>
+  </body>
 </html>
